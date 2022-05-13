@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/umd/index.js",
+  "types": "dist/app/index.d.ts",
+  "files": [
+    "dist/app",
+    "dist/umd"
+  ],
+  "scripts": {
+    "build": "npm run bundle:prod",
+    "bundle:prod": "webpack --mode production",
+    "bundle:dev": "webpack --mode development --devtool source-map",
+    "start": "webpack serve --mode development --open",
+    "prepack": "npx tsc && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
